@@ -10,6 +10,6 @@ class SimpleCfb
   # Date for VERSION. If this changes, be sure to re-run "bundle install"
   # or "bundle update".
   #
-  DATE    = '2022-08-07'
+  DATE = '2022-08-07'
 
 end

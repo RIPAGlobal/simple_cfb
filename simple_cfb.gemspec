@@ -12,7 +12,7 @@ Gem::Specification.new do | s |
   s.summary               = 'Basic read/write support for Microsoft CFB'
   s.description           = 'Basic read/write support for the Microsoft Compound File Binary file format'
   s.homepage              = 'https://www.ripaglobal.com/'
-  s.license               = 'MIT'
+  s.license               = 'Apache-2.0'
   s.required_ruby_version = '>= 2.7.0'
 
   s.metadata['homepage_uri'   ] = s.homepage
@@ -20,7 +20,7 @@ Gem::Specification.new do | s |
   s.metadata['bug_tracker_uri'] = 'https://github.com/RIPAGlobal/simple_cfb/issues/'
   s.metadata['changelog_uri'  ] = 'https://github.com/RIPAGlobal/simple_cfb/blob/master/CHANGELOG.md'
 
-  s.files = Dir['lib/**/*', 'LICENSE.txt', 'Rakefile', 'README.md']
+  s.files = Dir['lib/**/*', 'LICENSE', 'Rakefile', 'README.md']
 
   s.bindir        = 'exe'
   s.executables   = s.files.grep(%r{\Aexe/}) { |f| File.basename(f) }

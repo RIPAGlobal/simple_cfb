@@ -9,11 +9,23 @@ CFB (Container File Binary) is a Microsoft-originated container format based on 
 
 * https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-cfb/
 
-CFB files are used to wrap OOXML data when an Excel spreadsheet is encrypted with a password. Support for encrypted OOXML files in Ruby was the primary reason for creating the Simple CFB gem.
+CFB files are used to wrap OOXML data when an Excel spreadsheet is encrypted with a password. Support for encrypted OOXML files in Ruby was the primary reason for creating the Simple CFB gem. If you're interested in that, then https://github.com/RIPAGlobal/ooxml_encryption may be of interest.
 
 
 
-## Use
+## Installation
+
+Install the gem and add to the application's `Gemfile` by executing:
+
+    $ bundle add simple_cfb
+
+If bundler is not being used to manage dependencies, install the gem by executing:
+
+    $ gem install simple_cfb
+
+
+
+## Usage
 ### Writing a file
 
 Create a new CFB object.
@@ -106,3 +118,25 @@ Due to the nature of the original file format, which has various tables written 
 Code quality is by Ruby standards - uhh - exciting... The original source was certainly an interesting thing to try and port. Most of the time it's a close copy of the original with several sections that I didn't even understand and simply transcribed to Ruby.
 
 Verification involved reading and writing files output by the original JavaScript source code, then comparing binary results with the Ruby port. Bugs are likely, in both the original code given its opacity and in the Ruby port given the likelihood of transcription errors. It suffices for the encrypted OOXML original use case; the code coverage report from running tests shows some significant gaps.
+
+
+
+## Development
+
+Use `bundle exec rspec` to run tests. Run `bin/console` for an interactive prompt that will allow you to experiment.
+
+To install this gem onto your local machine, run `bundle exec rake install`. If you have sufficient RubyGems access to release a new version, update the version number and date in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+
+Locally generated RDoc HTML seems to contain a more comprehensive and inter-linked set of pages than those available from `rubydoc.info`. You can (re)generate the internal [`rdoc` documentation](https://ruby-doc.org/stdlib-2.4.1/libdoc/rdoc/rdoc/RDoc/Markup.html#label-Supported+Formats) with:
+
+```shell
+bundle exec rake rerdoc
+```
+
+...yes, that's `rerdoc` - Re-R-Doc - then open `docs/rdoc/index.html`.
+
+
+
+## Contributing
+
+Bug reports and pull requests are welcome on GitHub at https://github.com/RIPAGlobal/simple_cfb.

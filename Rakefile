@@ -9,7 +9,7 @@ end
 Rake::RDocTask.new do | rd |
   rd.rdoc_files.include('README.md', 'lib/**/*.rb')
 
-  rd.title     = 'Scimitar'
+  rd.title     = 'SimpleCFB'
   rd.main      = 'README.md'
   rd.rdoc_dir  = 'docs/rdoc'
   rd.generator = 'sdoc'
