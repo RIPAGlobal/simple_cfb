@@ -8,19 +8,19 @@ require 'active_support/core_ext/object/try.rb'
 
 # Ported from https://github.com/SheetJS/js-cfb.
 #
-# This Ruby port takes the mess of the CFB code and tries to be equivalent,
-# but in so doing there are likely additional bugs and I've omitted anything
-# that wasn't needed for encrypted OOXML writing and reading.
-#
 # File data is added with #add then, when finished, the entire blob of CFB
 # data is generated in one go with #write. Progressive creation is impossible
 # as the CFB file requires information on file sizes and directory entries at
 # the start of output, so all of that must be known beforehand.
 #
-# Files can be parsed into a new object with #parse! then #file_index and
+# Files can be parsed into a new object with #parse!, then #file_index and
 # #full_paths examined to extract the parsed CFB container components.
 #
 #    https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-cfb/
+#
+# This Ruby port tries to be equivalent to the JavaScript original, but in so
+# doing there are likely additional bugs and I've omitted anything that wasn't
+# needed for encrypted OOXML writing and reading.
 #
 class SimpleCfb
 

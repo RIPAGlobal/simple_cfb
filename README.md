@@ -119,7 +119,7 @@ Due to the nature of the original file format, which has various tables written 
 
 ## Other notes
 
-Code quality is by Ruby standards - uhh - exciting... The original source was certainly an interesting thing to try and port. Most of the time it's a close copy of the original with several sections that I didn't even understand and simply transcribed to Ruby.
+Coding style is atypical for Ruby, which simply reflects the style of the original JavaScript sources. Most of the time it's a close copy of the original with several sections that I didn't even understand and simply transcribed to Ruby.
 
 Verification involved reading and writing files output by the original JavaScript source code, then comparing binary results with the Ruby port. Bugs are likely, in both the original code given its opacity and in the Ruby port given the likelihood of transcription errors. It suffices for the encrypted OOXML original use case; the code coverage report from running tests shows some significant gaps.
 
