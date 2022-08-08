@@ -1,4 +1,8 @@
 # SimpleCFB
+
+[![License](https://img.shields.io/badge/license-Apache%202-blue)](https://opensource.org/licenses/Apache-2.0)
+[![Build Status](https://github.com/RIPAGlobal/simple_cfb/actions/workflows/ruby.yml/badge.svg)](https://github.com/RIPAGlobal/simple_cfb/actions)
+
 ## Overview
 
 SimpleCFB implements ways to read and write CFB files in pure Ruby. It is a port of parts of:
