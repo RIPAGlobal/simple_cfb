@@ -12,7 +12,7 @@
 require 'simplecov'
 SimpleCov.start()
 
-require 'byebug'
+require 'debug'
 require 'simple_cfb'
 
 # ============================================================================
